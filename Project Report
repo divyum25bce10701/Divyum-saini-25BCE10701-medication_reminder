@@ -1,8 +1,13 @@
 Project Report: Smart Medication Reminder System
 1. Introduction
-In the hustle of modern life, health often takes a back seat. One of the most common issues patients and elderly individuals face is forgetting to take their medication on time or losing track of their prescription details. Missing a dose can have serious health consequences.
+In the hustle of modern life, health often takes a back seat. 
+One of the most common issues patients and elderly individuals face is forgetting to take their medication on time or losing track of their prescription details. 
+Missing a dose can have serious health consequences.
 
-To address this, we have developed a Smart Medication Reminder System. This desktop application, built using Python, serves as a personal health assistant. It allows users to digitally schedule their medication, view their history, and receive audio-visual reminders. The project focuses on simplicity and accessibility, featuring a high-contrast dark mode and voice assistance to help users who may be visually impaired or elderly.
+To address this, we have developed a Smart Medication Reminder System. 
+This desktop application, built using Python, serves as a personal health assistant. 
+It allows users to digitally schedule their medication, view their history, and receive audio-visual reminders. 
+The project focuses on simplicity and accessibility, featuring a high-contrast dark mode and voice assistance to help users who may be visually impaired or elderly.
 
 2. Objectives
 The primary goals of this project were:
@@ -18,7 +23,8 @@ Functionality: To ensure users can add, view, and check reminders for their medi
 3. System Design and Technologies Used
 The application was built using Python due to its readability and vast library support.
 
-Frontend (GUI): We used tkinter to build the windows, buttons, and input forms. We applied a custom styling (ttk.Style) to give the app a modern "Dark Mode" aesthetic with green accent buttons (#117A65), which is calming and medical-themed.
+Frontend (GUI): We used tkinter to build the windows, buttons, and input forms. 
+We applied a custom styling (ttk.Style) to give the app a modern "Dark Mode" aesthetic with green accent buttons (#117A65), which is calming and medical-themed.
 
 Backend (Logic): Python functions handle the logic for adding data and comparing times.
 
