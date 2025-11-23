@@ -88,4 +88,6 @@ Email/SMS Alerts: sending a text message to a caregiver if a patient misses a do
 Complex Scheduling: Allowing for specific days of the week (e.g., "Mondays and Fridays only").
 
 7. Conclusion
-The Medication Reminder App successfully demonstrates how Python can be used to solve real-world health problems. By combining file handling, GUI design, and voice synthesis, we created a tool that is not only functional but also accessible to those who need it most. It bridges the gap between complex medical schedules and daily convenience.
+The Medication Reminder App successfully demonstrates how Python can be used to solve real-world health problems. 
+By combining file handling, GUI design, and voice synthesis, we created a tool that is not only functional but also accessible to those who need it most. 
+It bridges the gap between complex medical schedules and daily convenience.
