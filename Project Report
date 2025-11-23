@@ -1,0 +1,91 @@
+Project Report: Smart Medication Reminder System
+1. Introduction
+In the hustle of modern life, health often takes a back seat. One of the most common issues patients and elderly individuals face is forgetting to take their medication on time or losing track of their prescription details. Missing a dose can have serious health consequences.
+
+To address this, we have developed a Smart Medication Reminder System. This desktop application, built using Python, serves as a personal health assistant. It allows users to digitally schedule their medication, view their history, and receive audio-visual reminders. The project focuses on simplicity and accessibility, featuring a high-contrast dark mode and voice assistance to help users who may be visually impaired or elderly.
+
+2. Objectives
+The primary goals of this project were:
+
+Digital Management: To replace paper prescriptions with a digital record stored in a CSV format.
+
+Accessibility: To integrate Text-to-Speech (TTS) technology so the app can "speak" to the user.
+
+User-Friendly Interface: To create a clean, dark-themed GUI (Graphical User Interface) that reduces eye strain and is easy to navigate.
+
+Functionality: To ensure users can add, view, and check reminders for their medication seamlessly.
+
+3. System Design and Technologies Used
+The application was built using Python due to its readability and vast library support.
+
+Frontend (GUI): We used tkinter to build the windows, buttons, and input forms. We applied a custom styling (ttk.Style) to give the app a modern "Dark Mode" aesthetic with green accent buttons (#117A65), which is calming and medical-themed.
+
+Backend (Logic): Python functions handle the logic for adding data and comparing times.
+
+Database: We used a CSV (Comma Separated Values) file (medication.csv) as a lightweight database to store medication names, dosages, and times permanently.
+
+Voice Engine: The pyttsx3 library was utilized to convert text to speech, providing auditory feedback when the user opens menus or performs actions.
+
+Time Management: datetime and dateutil libraries are used to handle current time and parse user-inputted schedules.
+
+4. Key Modules and Implementation
+The project is divided into four main functional modules:
+
+A. The Dashboard (Main Menu)
+
+Upon launching the application, the user is greeted by a voice message welcoming them to the system. The main window acts as a central hub with four primary options: Add, Display, Set Reminder, and Exit.
+
+B. Adding Medication (add_medication)
+
+This module opens a new window where the user enters details:
+
+Medication Name
+
+Dosage
+
+Frequency
+
+Schedule Time
+
+Once the "Add Medication" button is clicked, the system opens the CSV file in 'append' mode and saves the new record. The system also provides an audio prompt instructing the user on what to do.
+
+C. Displaying Records (display_medication)
+
+This feature allows the user to see what they have entered. It reads the CSV file and generates dynamic labels to list every medication currently stored in the database. This is useful for the user to verify their schedule.
+
+D. Reminder Logic (set_medication_reminders)
+
+This is the core intelligence of the system.
+
+The system fetches the current system time (e.g., "14:30").
+
+It loads the CSV data.
+
+It loops through every saved medication.
+
+It compares the Current Time with the Scheduled Time.
+
+If they match, a pop-up alert appears on the screen, and the console prints a reminder.
+
+5. Challenges and Limitations
+While developing this system, we encountered a few challenges:
+
+Time Parsing: Users might enter time in different formats. We used dateutil.parser to ensure the system can understand the time regardless of small formatting differences.
+
+Data Persistence: ensuring the CSV file was read and written to without deleting previous data required careful handling of file modes ('a' for append vs 'r' for read).
+
+Current Limitations:
+
+Currently, the "Set Reminder" feature checks the time when the button is clicked. A future version would ideally run a background loop to check the time automatically every minute without user intervention.
+
+6. Future Scope
+This project establishes a solid foundation, but it can be expanded in several ways:
+
+Mobile Integration: Porting this to a mobile app so users get notifications on their phones.
+
+Email/SMS Alerts: sending a text message to a caregiver if a patient misses a dose.
+
+Complex Scheduling: Allowing for specific days of the week (e.g., "Mondays and Fridays only").
+
+7. Conclusion
+The Medication Reminder App successfully demonstrates how Python can be used to solve real-world health problems. By combining file handling, GUI design, and voice synthesis, we created a tool that is not only functional but also accessible to those who need it most. It bridges the gap between complex medical schedules and daily convenience.
